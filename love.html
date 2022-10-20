@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="love.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Lili💖</div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="calendario.html">Calendario</a></li>
+        <li><a class="active" href="love.html">Love</a></li>
+        <li><a href="#">Prox...</a></li>
+        <li><a href="#">Prox...</a></li>
+      </ul>
+    </nav>
+    <!-- <div class="container">
+      <div class="heading">My World 🤍🤍</div>
+      <div class="video-container">
+        <div class="video">
+          <video src="muisc/video1.mp4"></video>
+        </div>
+        <div class="video">
+          <video src="muisc/Amor - 32021.mp4" muted></video>
+        </div>
+        <div class="video">
+          <video src="muisc/Rosas - 31649.mp4" muted></video>
+        </div>
+        <div class="video">
+          <video src="" muted></video>
+        </div>
+      </div>
+    </div>
+<script>
+  var video = document.querySelectorAll('video')
+  video.forEach(play=> play.addEventListener('click',()=>{
+play.classList.toggle('active');
+
+if(play.paused){
+  play.play()
+}else{
+  play.pause();
+  play.currentTime=0;
+}
+  }))
+</script> -->
+<!-- <h3 class="heading">Mi World 🌎</h3>
+
+<div class="container">
+
+  <div class="main-video">
+    <div class="video">
+        <video src="muisc/vid-1.mp4" controls muted autoplay></video>
+      <h3 class="title">01. video title</h3>
+    </div>
+  </div>
+
+  <div class="video-list">
+    <div class="vid active">
+      <video src="muisc/vid-1.mp4" muted></video>
+      <h3 class="title">01. video title</h3>
+    </div>
+    <div class="vid">
+      <video src="muisc/vid-2.mp4" muted></video>
+      <h3 class="title">02. video title</h3>
+    </div>
+    <div class="vid">
+      <video src="muisc/vid-3.mp4" muted></video>
+      <h3 class="title">03. video title</h3>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+
+  <div class="main-video-container">
+     <video src="images/vid-1.mp4" loop controls class="main-video"></video>
+     <h3 class="main-vid-title">Por nosotros ❤</h3>
+  </div>
+
+  <div class="video-list-container">
+
+     <div class="list active">
+        <video src="images/vid-1.mp4" class="list-video"></video>
+        <h3 class="list-title">Por nosotros ❤</h3>
+     </div>
+
+     <div class="list">
+        <video src="images/vid-2.mp4" class="list-video"></video>
+        <h3 class="list-title">Gracias Por estar en mi Vida</h3>
+     </div>
+
+     <div class="list">
+        <video src="images/vid-3.mp4" class="list-video"></video>
+        <h3 class="list-title">Feliz 2 Mes Amor</h3>
+     </div>
+  </div>
+
+</div>
+
+
+<script>
+let videoList = document.querySelectorAll('.video-list-container .list');
+
+videoList.forEach(vid =>{
+   vid.onclick = () =>{
+      videoList.forEach(remove =>{remove.classList.remove('active')});
+      vid.classList.add('active');
+      let src = vid.querySelector('.list-video').src;
+      let title = vid.querySelector('.list-title').innerHTML;
+      document.querySelector('.main-video-container .main-video').src = src;
+      document.querySelector('.main-video-container .main-video').play();
+      document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
+   };
+});
+</script>
+
+  </body>
+</html>
